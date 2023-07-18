@@ -34,3 +34,5 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Trigger Azure Machine Learning job
       run: run_id=$(az ml job create --file src/job_pro.yml   --resource-group DefaultResourceGroup-eastus --workspace-name abc --query name -o tsv)
+    - name: create model
+      run: az ml model create -f src\mm.yaml
