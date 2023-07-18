@@ -1,0 +1,4 @@
+$schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
+name: mlops
+path: azureml://jobs/${run_id}/outputs/artifacts/paths/model/
+description: Model created from local file.
